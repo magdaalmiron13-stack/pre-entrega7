@@ -1,0 +1,26 @@
+@use "../utilities/variables" as v;
+
+// Reinicio de márgenes y espaciados
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Variables CSS que utiliza el sitio
+:root {
+    --bs-primary: #{v.$color-principal};
+    --color-principal: #{v.$color-principal};
+    --color-secundario: #{v.$color-secundario};
+    --color-fondo: #{v.$color-fondo};
+    --color-secciones: #{v.$color-secciones};
+}
+
+
+// Estilo general del body
+.texto-general {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--color-principal);
+    background-color: var(--color-fondo);
+}

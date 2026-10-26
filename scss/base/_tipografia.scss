@@ -1,0 +1,34 @@
+// Importación de fuentes de Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Serif+Display:ital@0;1&display=swap');
+
+// Fuente general del sitio
+.texto-general {
+    font-family: 'Cormorant Garamond', sans-serif;
+}
+
+// Título principal
+.titulo-principal {
+    font-family: 'DM Serif Display', sans-serif;
+    font-size: 2.5rem;
+    line-height: 1.6;
+}
+
+// Títulos de categorías
+.subtitulo-categoria {
+    font-family: 'DM Serif Display', sans-serif;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+// Títulos de recetas
+.subtitulo-receta {
+    font-family: 'DM Serif Display', sans-serif;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+// Párrafos de recetas
+.parrafo-receta {
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
