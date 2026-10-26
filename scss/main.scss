@@ -1,0 +1,27 @@
+// Utilidades
+@use "utilities/variables";
+@use "utilities/mixins";
+
+// Estilos generales
+@use "base/base";
+@use "base/tipografia";
+
+// Estructura del sitio
+@use "layout/header";
+@use "layout/nav";
+@use "layout/secciones";
+
+// Componentes
+@use "components/cards";
+@use "components/imagenes";
+@use "components/buttons";
+
+// Footer
+@use "layout/footer";
+
+//  Componentes de Bootstrap personalizados
+@use "components/carousel";
+@use "components/accordion";
+
+// Diseño responsive
+@use "layout/responsive";

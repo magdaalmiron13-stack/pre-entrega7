@@ -1,525 +1,377 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Serif+Display:ital@0;1&display=swap');
-
-
-/* ==================================================
-   1. CONFIGURACIÓN GENERAL
-   ================================================== */
-
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Serif+Display:ital@0;1&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --bs-primary: #5A4842;
-
-    --color-principal: #5A4842;
-    --color-secundario: #A8B5A0;
-    --color-fondo: #F8F3EA;
-    --color-secciones: #E8DED0;
+  --bs-primary: #5A4842;
+  --color-principal: #5A4842;
+  --color-secundario: #A8B5A0;
+  --color-fondo: #F8F3EA;
+  --color-secciones: #E8DED0;
 }
 
-
-/* ==================================================
-   2. TIPOGRAFÍA
-   ================================================== */
+.texto-general {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-principal);
+  background-color: var(--color-fondo);
+}
 
 .texto-general {
-    font-family: 'Cormorant Garamond', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    color: var(--color-principal);
-    background-color: var(--color-fondo);
+  font-family: "Cormorant Garamond", sans-serif;
 }
 
 .titulo-principal {
-    font-family: 'DM Serif Display', sans-serif;
-    font-size: 2.5rem;
-    line-height: 1.6;
+  font-family: "DM Serif Display", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.6;
 }
 
 .subtitulo-categoria {
-    font-family: 'DM Serif Display', sans-serif;
-    font-size: 2rem;
-    margin-top: 1rem;
+  font-family: "DM Serif Display", sans-serif;
+  font-size: 2rem;
+  margin-top: 1rem;
 }
 
 .subtitulo-receta {
-    font-family: 'DM Serif Display', sans-serif;
-    font-size: 1.2rem;
-    margin-top: 1rem;
+  font-family: "DM Serif Display", sans-serif;
+  font-size: 1.2rem;
+  margin-top: 1rem;
 }
 
 .parrafo-receta {
-    font-weight: 400;
-    margin-bottom: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
 }
 
-
-/* ==================================================
-   3. HEADER Y NAVBAR DE BOOTSTRAP
-   ================================================== */
-
 .encabezado-principal {
-    background: linear-gradient(135deg, #A8B5A0, #C5CDBD);
+  background: linear-gradient(135deg, #A8B5A0, #C5CDBD);
 }
 
 .navbar-recetario {
-    width: 100%;
-    padding: 1rem;
+  width: 100%;
+  padding: 1rem;
 }
-
 .navbar-recetario .navbar-toggler {
-    transition: background-color 0.3s ease,
-                transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 .navbar-recetario .navbar-toggler:hover {
-    background-color: #C5CDBD;
+  background-color: #C5CDBD;
 }
-
 .navbar-recetario .navbar-toggler:focus {
-    outline: 2px solid #5A4842;
-    outline-offset: 3px;
-    box-shadow: none;
+  outline: 2px solid #5A4842;
+  outline-offset: 3px;
+  box-shadow: none;
 }
-
 .navbar-recetario .navbar-toggler:active {
-    background-color: #A8B5A0;
-    transform: scale(0.95);
+  background-color: #A8B5A0;
+  transform: scale(0.95);
 }
-
 .navbar-recetario .nav-link {
-    color: var(--color-principal);
-    font-family: 'Cormorant Garamond', sans-serif;
-    font-size: 18px;
-    border-radius: 4px;
-    padding: 10px 15px;
-
-    transition: background-color 0.3s ease,
-                color 0.3s ease;
+  color: #5A4842;
+  font-family: "Cormorant Garamond", sans-serif;
+  font-size: 18px;
+  border-radius: 4px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 .navbar-recetario .nav-link:hover {
-    background-color: var(--color-principal);
-    color: var(--color-fondo);
+  background-color: #5A4842;
+  color: #F8F3EA;
 }
-
 .navbar-recetario .nav-link:focus {
-    background-color: var(--color-principal);
-    color: var(--color-fondo);
-    outline: 2px solid var(--color-fondo);
-    outline-offset: 2px;
+  background-color: #5A4842;
+  color: #F8F3EA;
+  outline: 2px solid #F8F3EA;
+  outline-offset: 2px;
 }
-
 .navbar-recetario .nav-link:active {
-    background-color: #354A32;
-    color: #FFFFFF;
+  background-color: #354A32;
+  color: #FFFFFF;
 }
-
-
-/* ==================================================
-   4. CONTENIDO PRINCIPAL
-   ================================================== */
 
 .contenido-principal {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
 }
-
-
-/* ==================================================
-   5. SECCIONES Y ARTÍCULOS
-   ================================================== */
 
 .seccion-receta,
 .seccion-presentacion,
 .seccion-informativa,
 .seccion-destacadas {
-    background-color: var(--color-secciones);
-    border: 1px solid rgba(90, 72, 66, 0.2);
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
+  background-color: #E8DED0;
+  border: 1px solid rgba(90, 72, 66, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
 }
-
-/* Presentación del index */
 
 .seccion-presentacion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
 }
-
-/* Secciones de recetas */
 
 .seccion-receta {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
 }
-
 .seccion-receta ul,
 .seccion-receta ol {
-    padding-left: 20px;
+  padding-left: 20px;
 }
-
-/* Información del index */
 
 .seccion-informativa {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-
-/* Artículos */
 
 .articulo-presentacion,
 .articulo-informativo {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .articulo-presentacion {
-    width: 100%;
+  width: 100%;
 }
 
 .articulo-informativo {
-    min-width: 0;
+  min-width: 0;
 }
 
-/* Recetas de Básicos */
-
 .articulo-basicos {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
 }
 
 .lista-categorias {
-    padding-left: 1.5rem;
+  padding-left: 1.5rem;
 }
 
-/* Ingredientes */
-
 .contenedor-ingredientes {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: stretch;
 }
 
 .lista-ingredientes {
-    width: 100%;
-    padding: 10px 20px;
+  width: 100%;
+  padding: 10px 20px;
 }
-
-/* Procedimientos */
 
 .contenedor-procedimiento {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-
-/* ==================================================
-   6. RECETAS DESTACADAS - CSS GRID
-   ================================================== */
-
 .grilla-recetas {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-
-    grid-template-areas:
-        "frutilla"
-        "bondiola"
-        "budin"
-        "chocolate";
-
-    gap: 20px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "frutilla" "bondiola" "budin" "chocolate";
+  gap: 20px;
 }
 
 .tarjeta-frutilla {
-    grid-area: frutilla;
+  grid-area: frutilla;
 }
 
 .tarjeta-bondiola {
-    grid-area: bondiola;
+  grid-area: bondiola;
 }
 
 .tarjeta-budin {
-    grid-area: budin;
+  grid-area: budin;
 }
 
 .tarjeta-chocolate {
-    grid-area: chocolate;
+  grid-area: chocolate;
 }
-
-/* Tarjetas */
 
 .tarjeta-receta {
-    padding: 20px;
-    border: 1px solid rgba(90, 72, 66, 0.2);
-    border-radius: 8px;
-    background-color: var(--color-fondo);
-
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    min-width: 0;
-
-    transition: transform 0.3s ease,
-                background-color 0.3s ease;
+  padding: 20px;
+  border: 1px solid rgba(90, 72, 66, 0.2);
+  border-radius: 8px;
+  background-color: #F8F3EA;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
-
 .tarjeta-receta:hover {
-    transform: translateY(-5px);
-    background-color: #F0E6D9;
+  transform: translateY(-5px);
+  background-color: #F0E6D9;
 }
-
 .tarjeta-receta:focus-within {
-    outline: 2px solid var(--color-principal);
-    outline-offset: 3px;
+  outline: 2px solid #5A4842;
+  outline-offset: 3px;
 }
-
 .tarjeta-receta:has(.enlace-receta:active) {
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 }
-
-
-/* ==================================================
-   7. IMÁGENES
-   ================================================== */
+.tarjeta-receta .foto-receta {
+  width: 100%;
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
 
 .imagen-general {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
-
-/* Logo del encabezado */
 
 .foto-logo {
-    width: 100px;
-    height: auto;
-    flex-shrink: 0;
+  width: 100px;
+  height: auto;
+  flex-shrink: 0;
 }
-
-/* Imágenes individuales de las recetas */
 
 .foto-receta {
-    width: 100%;
-    max-width: 350px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
+  width: 100%;
+  max-width: 350px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
 }
-
-
-/* Fotografías de las tarjetas destacadas */
-
-.tarjeta-receta .foto-receta {
-    width: 100%;
-    max-width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-/* Imagen de presentación del index */
 
 .imagen-presentacion {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
 }
-
-
-/* ==================================================
-   8. ENLACES Y PSEUDOCLASES
-   ================================================== */
 
 .enlace-receta {
-    color: var(--color-principal);
-    transition: color 0.3s ease;
+  color: #5A4842;
+  transition: color 0.3s ease;
 }
-
 .enlace-receta:hover {
-    color: #354A32;
+  color: #354A32;
 }
-
 .enlace-receta:focus {
-    outline: 2px solid var(--color-principal);
-    outline-offset: 3px;
+  outline: 2px solid #5A4842;
+  outline-offset: 3px;
 }
-
 .enlace-receta:active {
-    color: var(--color-secundario);
+  color: #A8B5A0;
 }
-
-
-/* ==================================================
-   9. FOOTER
-   ================================================== */
-
-.pie-pagina {
-    background-color: var(--color-secciones);
-    color: var(--color-principal);
-    padding: 1.5rem;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-
-    text-align: center;
-}
-
-.lista-redes {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.texto-pie {
-    font-size: 0.9rem;
-    margin: 0;
-}
-
-
-/* ==================================================
-   10. CAROUSEL DE BOOTSTRAP
-   ================================================== */
-
-#carouselRecetas {
-    max-width: 350px;
-    margin: 20px auto 0;
-}
-
-#carouselRecetas .carousel-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-/* Botones del carousel */
 
 .carousel-control-prev,
 .carousel-control-next {
-    transition: opacity 0.3s ease,
-                background-color 0.3s ease;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
 }
-
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-    background-color: rgba(90, 72, 66, 0.25);
+  background-color: rgba(90, 72, 66, 0.25);
 }
-
 .carousel-control-prev:focus,
 .carousel-control-next:focus {
-    outline: 2px solid var(--color-principal);
-    outline-offset: 2px;
+  outline: 2px solid #5A4842;
+  outline-offset: 2px;
 }
-
 .carousel-control-prev:active,
 .carousel-control-next:active {
-    background-color: rgba(90, 72, 66, 0.5);
+  background-color: rgba(90, 72, 66, 0.5);
 }
 
+.pie-pagina {
+  background-color: #E8DED0;
+  color: #5A4842;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+}
+.pie-pagina .lista-redes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pie-pagina .texto-pie {
+  font-size: 0.9rem;
+  margin: 0;
+}
 
-/* ==================================================
-   11. ACORDEONES DE BOOTSTRAP
-   ================================================== */
+#carouselRecetas {
+  max-width: 350px;
+  margin: 20px auto 0;
+}
+#carouselRecetas .carousel-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
 
 .accordion {
-    --bs-accordion-active-bg: var(--color-secundario);
-    --bs-accordion-active-color: var(--color-principal);
-    --bs-accordion-btn-focus-box-shadow: 0 0 0 3px #A8B5A0;
+  --bs-accordion-active-bg: #A8B5A0;
+  --bs-accordion-active-color: #5A4842;
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 3px #A8B5A0;
 }
 
 .accordion-button {
-    color: var(--color-principal);
-
-    transition: background-color 0.3s ease,
-                color 0.3s ease;
+  color: #5A4842;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 .accordion-button:hover {
-    background-color: #C5CDBD;
+  background-color: #C5CDBD;
 }
-
 .accordion-button:focus {
-    outline: 2px solid var(--color-principal);
+  outline: 2px solid #5A4842;
 }
-
 .accordion-button:active {
-    background-color: var(--color-secundario);
+  background-color: #A8B5A0;
 }
-
-
-/* ==================================================
-   12. MEDIA QUERIES
-   ================================================== */
-
-/* TABLET: DESDE 768px */
 
 @media (min-width: 768px) {
-
-    .grilla-recetas {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
-        grid-template-areas:
-            "frutilla bondiola"
-            "budin chocolate";
-    }
-
+  .grilla-recetas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas: "frutilla bondiola" "budin chocolate";
+  }
 }
-
-
-/* DESKTOP: DESDE 1024px */
-
 @media (min-width: 1024px) {
-
-    .grilla-recetas {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-
-        grid-template-areas:
-            "frutilla bondiola budin chocolate";
-    }
-
-    .seccion-presentacion {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .articulo-presentacion {
-        flex: 1;
-        min-width: 0;
-    }
-
-    .imagen-presentacion {
-        width: 45%;
-    }
-
-    .contenedor-ingredientes {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 30px;
-    }
-
-    .contenedor-ingredientes .foto-receta {
-        width: 350px;
-        max-width: 100%;
-    }
-
-    .lista-ingredientes {
-        flex: 1;
-        min-width: 0;
-    }
-
+  .grilla-recetas {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-areas: "frutilla bondiola budin chocolate";
+  }
+  .seccion-presentacion {
+    flex-direction: row;
+    align-items: center;
+  }
+  .articulo-presentacion {
+    flex: 1;
+    min-width: 0;
+  }
+  .imagen-presentacion {
+    width: 45%;
+  }
+  .contenedor-ingredientes {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .contenedor-ingredientes .foto-receta {
+    width: 350px;
+    max-width: 100%;
+  }
+  .lista-ingredientes {
+    flex: 1;
+    min-width: 0;
+  }
 }
+
+/*# sourceMappingURL=styles.css.map */
