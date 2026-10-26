@@ -1,0 +1,40 @@
+@use "../utilities/variables" as v;
+
+// Enlaces de las recetas
+.enlace-receta {
+    color: v.$color-principal;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: v.$color-verde-oscuro;
+    }
+
+    &:focus {
+        outline: 2px solid v.$color-principal;
+        outline-offset: 3px;
+    }
+
+    &:active {
+        color: v.$color-secundario;
+    }
+}
+
+// Controles del carousel de Bootstrap
+.carousel-control-prev,
+.carousel-control-next {
+    transition: opacity 0.3s ease,
+                background-color 0.3s ease;
+
+    &:hover {
+        background-color: rgba(v.$color-principal, 0.25);
+    }
+
+    &:focus {
+        outline: 2px solid v.$color-principal;
+        outline-offset: 2px;
+    }
+
+    &:active {
+        background-color: rgba(v.$color-principal, 0.5);
+    }
+}

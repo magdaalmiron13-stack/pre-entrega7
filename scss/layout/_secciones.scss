@@ -1,0 +1,84 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+// Contenedor principal de todas las páginas */
+.contenido-principal {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+// Estilos compartidos por las secciones
+.seccion-receta,
+.seccion-presentacion,
+.seccion-informativa,
+.seccion-destacadas {
+    background-color: v.$color-secciones;
+    border: 1px solid rgba(v.$color-principal, 0.2);
+    border-radius: v.$radio-borde;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+// Presentación del inicio
+.seccion-presentacion {
+    @include m.flex-column;
+    align-items: center;
+}
+
+// Secciones de recetas
+.seccion-receta {
+    @include m.flex-column;
+    min-width: 0;
+
+    ul,
+    ol {
+        padding-left: 20px;
+    }
+}
+
+// Información del inicio
+.seccion-informativa {
+    @include m.flex-column;
+}
+
+// Artículos
+.articulo-presentacion,
+.articulo-informativo {
+    margin-bottom: 1rem;
+}
+
+.articulo-presentacion {
+    width: 100%;
+}
+
+.articulo-informativo {
+    min-width: 0;
+}
+
+// Artículos de la categoría Básicos
+.articulo-basicos {
+    @include m.flex-column;
+    padding: v.$espaciado-base;
+}
+
+// Lista de categorías
+.lista-categorias {
+    padding-left: 1.5rem;
+}
+
+// Contenedor de imagen e ingredientes
+.contenedor-ingredientes {
+    @include m.flex-column;
+    align-items: stretch;
+}
+
+.lista-ingredientes {
+    width: 100%;
+    padding: 10px 20px;
+}
+
+// Procedimientos
+.contenedor-procedimiento {
+    @include m.flex-column(15px);
+}

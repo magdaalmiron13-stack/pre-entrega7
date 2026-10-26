@@ -1,0 +1,56 @@
+@use "../utilities/variables" as v;
+
+.navbar-recetario {
+    width: 100%;
+    padding: 1rem;
+
+    // Botón hamburguesa de Bootstrap
+    .navbar-toggler {
+        transition: background-color 0.3s ease,
+                    transform 0.3s ease;
+
+        &:hover {
+            background-color: v.$color-verde-claro;
+        }
+
+        &:focus {
+            outline: 2px solid v.$color-principal;
+            outline-offset: 3px;
+            box-shadow: none;
+        }
+
+        &:active {
+            background-color: v.$color-secundario;
+            transform: scale(0.95);
+        }
+    }
+
+    // Enlaces de navegación
+    .nav-link {
+        color: v.$color-principal;
+        font-family: 'Cormorant Garamond', sans-serif;
+        font-size: 18px;
+        border-radius: 4px;
+        padding: 10px 15px;
+
+        transition: background-color 0.3s ease,
+                    color 0.3s ease;
+
+        &:hover {
+            background-color: v.$color-principal;
+            color: v.$color-fondo;
+        }
+
+        &:focus {
+            background-color: v.$color-principal;
+            color: v.$color-fondo;
+            outline: 2px solid v.$color-fondo;
+            outline-offset: 2px;
+        }
+
+        &:active {
+            background-color: v.$color-verde-oscuro;
+            color: v.$color-blanco;
+        }
+    }
+}

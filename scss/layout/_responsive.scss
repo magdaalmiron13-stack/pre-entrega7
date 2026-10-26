@@ -1,0 +1,53 @@
+// TABLET: DESDE 768px
+@media (min-width: 768px) {
+
+    .grilla-recetas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        grid-template-areas:
+            "frutilla bondiola"
+            "budin chocolate";
+    }
+}
+
+
+// DESKTOP: DESDE 1024px
+@media (min-width: 1024px) {
+
+    .grilla-recetas {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+
+        grid-template-areas:
+            "frutilla bondiola budin chocolate";
+    }
+
+    .seccion-presentacion {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .articulo-presentacion {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .imagen-presentacion {
+        width: 45%;
+    }
+
+    .contenedor-ingredientes {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 30px;
+
+        .foto-receta {
+            width: 350px;
+            max-width: 100%;
+        }
+    }
+
+    .lista-ingredientes {
+        flex: 1;
+        min-width: 0;
+    }
+}

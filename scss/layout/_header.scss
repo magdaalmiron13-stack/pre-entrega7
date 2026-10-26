@@ -1,0 +1,10 @@
+@use "../utilities/variables" as v;
+
+// Fondo del encabezado
+.encabezado-principal {
+    background: linear-gradient(
+        135deg,
+        v.$color-secundario,
+        v.$color-verde-claro
+    );
+}

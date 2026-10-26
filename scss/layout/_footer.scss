@@ -1,0 +1,26 @@
+@use "../utilities/variables" as v;
+
+.pie-pagina {
+    background-color: v.$color-secciones;
+    color: v.$color-principal;
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+
+    // Lista de redes sociales
+    .lista-redes {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    // Texto del pie de página
+    .texto-pie {
+        font-size: 0.9rem;
+        margin: 0;
+    }
+}

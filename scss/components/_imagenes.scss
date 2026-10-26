@@ -1,0 +1,30 @@
+@use "../utilities/variables" as v;
+
+// Configuración general de imágenes
+.imagen-general {
+    max-width: 100%;
+    display: block;
+}
+
+// Logo principal
+.foto-logo {
+    width: 100px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+// Fotografías individuales de recetas
+.foto-receta {
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: v.$radio-borde;
+}
+
+// Imagen de presentación del inicio
+.imagen-presentacion {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}

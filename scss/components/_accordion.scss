@@ -1,0 +1,28 @@
+@use "../utilities/variables" as v;
+
+// Personalización del acordeón
+.accordion {
+    --bs-accordion-active-bg: #{v.$color-secundario};
+    --bs-accordion-active-color: #{v.$color-principal};
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 3px #{v.$color-secundario};
+}
+
+// Botones del acordeón
+.accordion-button {
+    color: v.$color-principal;
+
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+
+    &:hover {
+        background-color: v.$color-verde-claro;
+    }
+
+    &:focus {
+        outline: 2px solid v.$color-principal;
+    }
+
+    &:active {
+        background-color: v.$color-secundario;
+    }
+}

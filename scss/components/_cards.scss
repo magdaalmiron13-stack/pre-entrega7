@@ -1,0 +1,70 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+// Contenedor de las tarjetas
+.grilla-recetas {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+
+    grid-template-areas:
+        "frutilla"
+        "bondiola"
+        "budin"
+        "chocolate";
+
+    gap: v.$espaciado-base;
+}
+
+// Ubicación de las tarjetas en la grilla
+.tarjeta-frutilla {
+    grid-area: frutilla;
+}
+
+.tarjeta-bondiola {
+    grid-area: bondiola;
+}
+
+.tarjeta-budin {
+    grid-area: budin;
+}
+
+.tarjeta-chocolate {
+    grid-area: chocolate;
+}
+
+// Diseño de cada tarjeta
+.tarjeta-receta {
+    padding: v.$espaciado-base;
+    border: 1px solid rgba(v.$color-principal, 0.2);
+    border-radius: v.$radio-borde;
+    background-color: v.$color-fondo;
+
+    @include m.flex-column(10px);
+
+    min-width: 0;
+
+    transition: transform 0.3s ease,
+                background-color 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        background-color: v.$color-hover-tarjetas;
+    }
+
+    &:focus-within {
+        outline: 2px solid v.$color-principal;
+        outline-offset: 3px;
+    }
+
+    &:has(.enlace-receta:active) {
+        transform: translateY(-2px);
+    }
+
+    // Imágenes de las tarjetas
+    .foto-receta {
+        width: 100%;
+        max-width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+}
