@@ -4,3 +4,6 @@ Thumbs.db
 
 # Dependencias
 node_modules/
+
+# Archivos auxiliares de Sass
+styles/*.css.map
